@@ -1,0 +1,157 @@
+/* Основные стили для Home */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Хедер */
+.hero {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  background-color: #ff4b2b;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #ff1b0b;
+}
+
+/* Преимущества */
+.benefits {
+  background: white;
+  padding: 60px 20px;
+}
+
+.benefit-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.benefit-icon {
+  color: #ff4b2b;
+  margin-right: 10px;
+}
+
+/* Популярные программы */
+.popular-programs {
+  background: #ffe5e5;
+  padding: 60px 20px;
+}
+
+.program-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.program-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Отзывы */
+.testimonials {
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+.testimonial-item {
+  background: white;
+  padding: 15px;
+  margin: 10px auto;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Тарифы */
+.pricing {
+  background: white;
+  padding: 60px 20px;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4b2b;
+  margin: 10px 0;
+}
+body {
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Light gradient */
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+.cta-button {
+  background-color: #ffc107; /* Bright yellow */
+  color: #1e1e1e;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #ff9800; /* Slightly darker yellow */
+}
