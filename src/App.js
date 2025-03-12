@@ -1,26 +1,58 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom"; // ❌ Убери `BrowserRouter`
+import React, { useState } from "react";
 import "./styles/styles.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Programs from "./pages/Programs";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-
+import { Navbar, Footer } from "./Components";
+import { Home, Programs, About, Contact, ProgramDetails, programs, programDetails } from "./MainPage";
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </>
-  );
+    const [activeComponent, setActiveComponent] = useState("home");
+    const [selectedProgram, setSelectedProgram] = useState(null);
+
+    // Переход к деталям программы
+    const handleProgramClick = (program) => {
+        setSelectedProgram({
+            ...program,
+            details: programDetails[program.id] || []
+        });
+    };
+    const handleProg = () =>{
+      setActiveComponent("programs");
+    }
+    // Возврат к списку программ
+    const handleBackToPrograms = () => {
+        setSelectedProgram(null);
+    };
+    const toContacts = () => {
+      setActiveComponent("contact");
+    }
+
+
+    const renderComponent = () => {
+        if (selectedProgram) {
+            return <ProgramDetails program={selectedProgram} onBack={handleBackToPrograms} />;
+        }
+
+        switch (activeComponent) {
+            case "home":
+                return <Home OnProg={handleProg} OnContact={toContacts}/>;
+            case "programs":
+                return <Programs onProgramClick={handleProgramClick} />;
+            case "about":
+                return <About />;
+            case "contact":
+                return <Contact />;
+            default:
+                return <Home />;
+        }
+    };
+
+    return (
+        <>
+            <Navbar setActiveComponent={setActiveComponent} />
+            <div className="content">
+                {renderComponent()}
+            </div>
+            <Footer />
+        </>
+    );
 };
 
 export default App;
