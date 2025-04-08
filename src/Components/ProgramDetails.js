@@ -1,12 +1,40 @@
 import React from "react";
-export const programs = [
+import { FixedSizeList as List } from "react-window";
+import { FaArrowLeft, FaCalendarAlt, FaDumbbell } from "react-icons/fa";
+
+  const programs = [
     { id: 1, title: "Сила и выносливость", image: require("../styles/images/strength.jpg"), description: "Развивайте силу и выносливость с профессиональными тренировками." },
     { id: 2, title: "Йога и растяжка", image: require("../styles/images/yoga.jpg"), description: "Гибкость и гармония тела с йогой и упражнениями на растяжку." },
     { id: 3, title: "Похудение и тонус", image: require("../styles/images/weight-loss.jpg"), description: "Эффективные тренировки для сжигания жира и подтянутого тела." },
     { id: 4, title: "Кардио интенсив", image: require("../styles/images/cardio.jpg"), description: "Высокоинтенсивные кардио-тренировки для укрепления сердца и сжигания калорий." },
     { id: 5, title: "Функциональный тренинг", image: require("../styles/images/functional.jpg"), description: "Упражнения для развития координации, силы и выносливости." },
-    { id: 6, title: "Домашние тренировки", image: require("../styles/images/home-workout.jpg"), description: "Комплексные программы для занятий дома без оборудования." }
+    { id: 6, title: "Домашние тренировки", image: require("../styles/images/home-workout.jpg"), description: "Комплексные программы для занятий дома без оборудования." },
+    { id: 7, title: "HIIT", image: require("../styles/images/cardio.jpg"), description: "Короткие, но интенсивные тренировки для быстрого результата." },
+    { id: 8, title: "Пилатес", image: require("../styles/images/yoga.jpg"), description: "Мягкая, но эффективная тренировка на все группы мышц." },
+    { id: 9, title: "Групповые занятия", image: require("../styles/images/functional.jpg"), description: "Тренируйтесь в команде и получайте мотивацию от других." },
+    { id: 10, title: "Силовая аэробика", image: require("../styles/images/strength.jpg"), description: "Сочетание кардио и силовых упражнений." },
+    { id: 11, title: "Танцевальный фитнес", image: require("../styles/images/cardio.jpg"), description: "Веселые тренировки под музыку." },
+    { id: 12, title: "Кроссфит", image: require("../styles/images/strength.jpg"), description: "Интенсивные функциональные тренировки для продвинутых." },
+    { id: 13, title: "Медитация и дыхание", image: require("../styles/images/yoga.jpg"), description: "Спокойствие ума и тела с помощью дыхательных практик." },
+    { id: 14, title: "Постнатальный фитнес", image: require("../styles/images/home-workout.jpg"), description: "Безопасные тренировки для восстановления после родов." },
+    { id: 15, title: "Фитнес для подростков", image: require("../styles/images/functional.jpg"), description: "Энергичные тренировки, подходящие для молодежи." },
+    { id: 16, title: "Утренняя зарядка", image: require("../styles/images/cardio.jpg"), description: "Быстрая зарядка для бодрого старта дня." },
+    { id: 17, title: "Вечерняя релаксация", image: require("../styles/images/yoga.jpg"), description: "Спокойные упражнения для снятия напряжения перед сном." },
+    { id: 18, title: "Программа для спины", image: require("../styles/images/home-workout.jpg"), description: "Укрепление мышц спины и профилактика болей." },
+    { id: 19, title: "Здоровые колени", image: require("../styles/images/functional.jpg"), description: "Упражнения для поддержки и укрепления коленных суставов." },
+    { id: 20, title: "Гибкость и баланс", image: require("../styles/images/yoga.jpg"), description: "Работа над подвижностью и устойчивостью тела." },
+    { id: 21, title: "Атлетическая подготовка", image: require("../styles/images/strength.jpg"), description: "Развитие силы, скорости и выносливости для спортсменов." },
+    { id: 22, title: "Фитнес на свежем воздухе", image: require("../styles/images/cardio.jpg"), description: "Тренировки, которые можно проводить на улице." },
+    { id: 23, title: "Пляжное тело", image: require("../styles/images/weight-loss.jpg"), description: "Целевая программа для подготовки к лету." },
+    { id: 24, title: "Мини-тренировки", image: require("../styles/images/home-workout.jpg"), description: "Короткие, но эффективные тренировки на каждый день." },
+    { id: 25, title: "Силовая йога", image: require("../styles/images/yoga.jpg"), description: "Йога с акцентом на развитие силы и контроля." },
+    { id: 26, title: "Интервальный бег", image: require("../styles/images/cardio.jpg"), description: "Пробежки с чередованием темпа для улучшения выносливости." },
+    { id: 27, title: "Прокачка пресса", image: require("../styles/images/strength.jpg"), description: "Фокус на развитии сильного и подтянутого пресса." },
+    { id: 28, title: "Фитнес после травм", image: require("../styles/images/home-workout.jpg"), description: "Осторожные тренировки для восстановления после травм." },
+    { id: 29, title: "Силовой круг", image: require("../styles/images/functional.jpg"), description: "Циклические упражнения с упором на силу." },
+    { id: 30, title: "Растяжка для всех", image: require("../styles/images/yoga.jpg"), description: "Универсальная программа для развития гибкости." }
   ];
+  
   export const programDetails = {
     1: [
       { day: "Понедельник", exercises: ["Жим гантелей", "Приседания", "Планка 1 мин"] },
@@ -160,27 +188,90 @@ export const programs = [
     ]
   };
   
-export const ProgramDetails = ({ program, onBack }) => (
-    <div className="program-details">
-        <button onClick={onBack} className="cta-button">Назад к программам</button>
 
-        <div className="program-details-content">
-            <img src={program.image} alt={program.title} className="program-details-image" />
 
-            <div className="program-details-info">
-                <h2>{program.title}</h2>
-                {programDetails[program.id].map((day, index) => (
-                    <div key={index}>
-                        <h3>{day.day}</h3>
-                        <ul>
-                            {day.exercises.map((exercise, idx) => (
-                                <li key={idx}>{exercise}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </div>
+// Exercise item renderer for virtualized list
+const ExerciseItem = ({ index, style, data }) => {
+  const { exercises, day } = data;
+  const exercise = exercises[index];
+  
+  return (
+    <div style={{ ...style, padding: '5px 0' }}>
+      <li style={{ display: 'flex', alignItems: 'center' }}>
+        <FaDumbbell style={{ marginRight: '0.5rem', fontSize: '0.8rem', color: 'var(--primary)' }} />
+        {exercise}
+      </li>
     </div>
+  );
+};
+
+// Day schedule component with virtualized exercise list
+const DaySchedule = ({ day, exercises }) => (
+  <div className="card" style={{ marginBottom: '1rem', padding: '1.5rem' }}>
+    <h3>
+      <FaCalendarAlt style={{ marginRight: '0.5rem', color: 'var(--primary)' }} />
+      {day}
+    </h3>
+    <div style={{ height: exercises.length * 35, maxHeight: 150, marginTop: '0.5rem' }}>
+      <List
+        height={exercises.length * 35 > 150 ? 150 : exercises.length * 35}
+        itemCount={exercises.length}
+        itemSize={35}
+        width="100%"
+        itemData={{ exercises, day }}
+      >
+        {ExerciseItem}
+      </List>
+    </div>
+  </div>
 );
+
+export const ProgramDetails = ({ program, onBack }) => {
+  if (!program) {
+    return (
+      <div className="program-details">
+        <div className="container">
+          <p>Программа не найдена</p>
+          <button onClick={onBack} className="cta-button">
+            <FaArrowLeft /> Назад к программам
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="program-details">
+      <div className="program-details-header">
+        <h1>{program.title}</h1>
+        <p>{program.description}</p>
+      </div>
+
+      <div className="container">
+        <div className="program-details-content">
+          <div className="program-details-image">
+            <img src={program.image || "/placeholder.svg"} alt={program.title} />
+          </div>
+
+          <div className="program-details-info">
+            <h2>Расписание тренировок</h2>
+            <p>Следуйте этому расписанию для достижения максимальных результатов</p>
+            
+            {programDetails[program.id]?.map((day, index) => (
+              <DaySchedule key={index} day={day.day} exercises={day.exercises} />
+            ))}
+          </div>
+        </div>
+
+        <div className="program-details-footer">
+          <button onClick={onBack} className="cta-button secondary">
+            <FaArrowLeft /> Назад к программам
+          </button>
+          <button className="cta-button">Начать программу</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default ProgramDetails;

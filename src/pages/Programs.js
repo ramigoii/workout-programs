@@ -1,8 +1,10 @@
 import React from "react";
-import { FixedSizeGrid as Grid } from "react-window";
+import { useTheme } from "../App";
+import VirtualizedGrid from "../Components/VirtualizedGrid";
 import "../styles/styles.css";
 
-export const programs = [
+  
+  export const programs = [
     { id: 1, title: "Сила и выносливость", image: require("../styles/images/strength.jpg"), description: "Развивайте силу и выносливость с профессиональными тренировками." },
     { id: 2, title: "Йога и растяжка", image: require("../styles/images/yoga.jpg"), description: "Гибкость и гармония тела с йогой и упражнениями на растяжку." },
     { id: 3, title: "Похудение и тонус", image: require("../styles/images/weight-loss.jpg"), description: "Эффективные тренировки для сжигания жира и подтянутого тела." },
@@ -35,53 +37,70 @@ export const programs = [
     { id: 30, title: "Растяжка для всех", image: require("../styles/images/yoga.jpg"), description: "Универсальная программа для развития гибкости." }
   ];
   
-  const columnCount = 3;
-  const columnWidth = 480;
-  const rowHeight = 400;
-  const rowCount = Math.ceil(programs.length / columnCount);
-  
-  const ProgramCell = ({ columnIndex, rowIndex, style, data }) => {
+// Program Card Cell Component for the virtualized grid
+const ProgramCell = ({ columnIndex, rowIndex, style, data }) => {
+    const { items, columnCount } = data;
     const index = rowIndex * columnCount + columnIndex;
-    const program = data[index];
+    const program = items[index];
   
     if (!program) return null;
   
+    // Add padding inside the cell
+    const cellStyle = {
+      ...style,
+      padding: '15px',
+      boxSizing: 'border-box',
+    };
+  
     return (
-      <div
-        className="program-card"
-        style={{
-          ...style,
-          padding: "10px",
-          boxSizing: "border-box",
-          cursor: "pointer",
-        }}
-        onClick={() => data.onProgramClick(program)}
-      >
-        <img
-          src={program.image}
-          alt={program.title}
-          style={{ width: "100%", borderRadius: "12px" }}
-        />
-        <h3>{program.title}</h3>
+      <div style={cellStyle}>
+        <div 
+          className="program-card" 
+          onClick={() => data.onProgramClick(program)}
+          style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+        >
+          <img 
+            src={program.image || "/placeholder.svg"} 
+            alt={program.title} 
+            style={{ 
+              width: '100%', 
+              height: '200px', 
+              objectFit: 'cover',
+              borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0'
+            }} 
+          />
+          <div className="program-card-content" style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+            <h3>{program.title}</h3>
+            <p style={{ flex: 1 }}>{program.description}</p>
+            <button className="cta-button">Подробнее</button>
+          </div>
+        </div>
       </div>
     );
   };
   
   export const Programs = ({ onProgramClick }) => {
+    const { theme } = useTheme();
+    
     return (
       <div className="programs-container">
-        <h1>Наши программы</h1>
-        <Grid
-          columnCount={columnCount}
-          columnWidth={columnWidth}
-          height={600}
-          rowCount={rowCount}
-          rowHeight={rowHeight}
-          width={columnWidth * columnCount}
-          itemData={{ ...programs, onProgramClick }}
-        >
-          {ProgramCell}
-        </Grid>
+        <section className="programs-hero">
+          <div className="about-hero-content">
+            <h1>Наши программы</h1>
+            <p>Выберите программу, которая подходит именно вам</p>
+          </div>
+        </section>
+        
+        <div className="container" style={{ padding: '2rem 1rem' }}>
+          <VirtualizedGrid 
+            items={programs}
+            renderItem={(props) => ProgramCell({ ...props, data: { ...props.data, onProgramClick, theme } })}
+            initialColumnCount={3}
+            rowHeight={400}
+            minColumnWidth={300}
+            gap={30}
+          />
+        </div>
       </div>
     );
   };
