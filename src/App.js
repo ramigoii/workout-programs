@@ -1,16 +1,24 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./styles/styles.css";
-import { Navbar, Footer } from "./Components";
-import { Home, Programs, About, Contact, ProgramDetails, programs, programDetails } from "./MainPage";
+import Navbar from "./Components/Navbar.js";
+import Footer from "./Components/Footer.js";
+import Home from "./pages/Home.js";
+import Programs from "./pages/Programs.js";
+import About from "./pages/About.js";
+import Contact from "./pages/Contact.js";
+import ProgramDetails from "./Components/ProgramDetails.js"; // ← Add this if you have it
+import programs from "./Components/ProgramDetails.js";
 
 // Контекст темы
 const ThemeContext = createContext();
 const useTheme = () => useContext(ThemeContext);
 
 const App = () => {
-    const [activeComponent, setActiveComponent] = useState("home");
     const [selectedProgram, setSelectedProgram] = useState(null);
     const [theme, setTheme] = useState("light");
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme") || "light";
@@ -26,40 +34,36 @@ const App = () => {
     };
 
     const handleProgramClick = (program) => {
-        setSelectedProgram({
-            ...program,
-            details: programDetails[program.id] || [],
-        });
-    };
-
-    const handleBackToPrograms = () => setSelectedProgram(null);
-    const toContacts = () => setActiveComponent("contact");
-    const handleProg = () => setActiveComponent("programs");
-
-    const renderComponent = () => {
-        if (selectedProgram) {
-            return <ProgramDetails program={selectedProgram} onBack={handleBackToPrograms} />;
-        }
-
-        switch (activeComponent) {
-            case "home":
-                return <Home OnProg={handleProg} OnContact={toContacts} />;
-            case "programs":
-                return <Programs onProgramClick={handleProgramClick} />;
-            case "about":
-                return <About />;
-            case "contact":
-                return <Contact />;
-            default:
-                return <Home />;
-        }
+        setSelectedProgram(program);
+        navigate("/program-details");
     };
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <Navbar setActiveComponent={setActiveComponent} />
+            <Navbar />
             <div className="content">
-                {renderComponent()}
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<Home OnProg={() => navigate("/programs")} OnContact={() => navigate("/contact")} />}
+                    />
+                    <Route
+                        path="/programs"
+                        element={<Programs onProgramClick={handleProgramClick} />}
+                    />
+                    <Route
+                        path="/about"
+                        element={<About />}
+                    />
+                    <Route
+                        path="/contact"
+                        element={<Contact />}
+                    />
+                    <Route
+                        path="/program-details"
+                        element={<ProgramDetails program={selectedProgram} onBack={() => navigate("/programs")} />}
+                    />
+                </Routes>
             </div>
             <Footer />
         </ThemeContext.Provider>
