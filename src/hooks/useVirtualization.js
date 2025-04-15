@@ -4,14 +4,14 @@ export const useVirtualization = (initialColumnCount = 3) => {
   const [columnCount, setColumnCount] = useState(initialColumnCount);
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
-    height: window.innerHeight
+    height: window.innerHeight,
   });
 
   useEffect(() => {
     const handleResize = () => {
       setDimensions({
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
       });
 
       if (window.innerWidth < 640) {
@@ -22,7 +22,7 @@ export const useVirtualization = (initialColumnCount = 3) => {
         setColumnCount(initialColumnCount);
       }
     };
-    
+
     handleResize(); // Set initial values
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);

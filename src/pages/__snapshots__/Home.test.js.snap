@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    class="home-container"
+  >
+    <section
+      class="hero"
+    >
+      <div
+        class="hero-content"
+      >
+        <h1>
+          Твой путь к идеальному телу
+        </h1>
+        <p>
+          Выбирай программу и начни тренировки прямо сейчас
+        </p>
+        <button
+          class="cta-button"
+        >
+          Выбрать программу
+        </button>
+      </div>
+    </section>
+    <section
+      class="benefits"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="section-title"
+        >
+          <h2>
+            Почему выбирают нас?
+          </h2>
+          <p>
+            Наши преимущества, которые помогут вам достичь желаемых результатов
+          </p>
+        </div>
+        <div
+          class="benefit-items"
+        >
+          <div
+            class="benefit-item"
+          >
+            <div
+              class="benefit-icon"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"
+                />
+              </svg>
+            </div>
+            <h3>
+              Персонализация
+            </h3>
+            <p>
+              Индивидуальный подход к каждому клиенту
+            </p>
+          </div>
+          <div
+            class="benefit-item"
+          >
+            <div
+              class="benefit-icon"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 640 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M104 96H56c-13.3 0-24 10.7-24 24v104H8c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h24v104c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm528 128h-24V120c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v272c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h24c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zM456 32h-48c-13.3 0-24 10.7-24 24v168H256V56c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v400c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h128v168c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24z"
+                />
+              </svg>
+            </div>
+            <h3>
+              Поддержка тренеров
+            </h3>
+            <p>
+              Профессиональные тренеры всегда на связи
+            </p>
+          </div>
+          <div
+            class="benefit-item"
+          >
+            <div
+              class="benefit-icon"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 384 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
+                />
+              </svg>
+            </div>
+            <h3>
+              Доступ 24/7
+            </h3>
+            <p>
+              Тренируйтесь в любое удобное время
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="programs-container"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="section-title"
+        >
+          <h2>
+            Популярные программы
+          </h2>
+          <p>
+            Выберите программу, которая подходит именно вам
+          </p>
+        </div>
+        <div
+          class="programs-grid"
+        >
+          <div
+            class="program-card"
+          >
+            <img
+              alt="Программа для похудения"
+              src="/placeholder.svg"
+            />
+            <div
+              class="program-card-content"
+            >
+              <h3>
+                Программа для похудения
+              </h3>
+              <p>
+                Эффективные тренировки для сжигания жира и подтянутого тела
+              </p>
+              <button
+                class="cta-button"
+              >
+                Подробнее
+              </button>
+            </div>
+          </div>
+          <div
+            class="program-card"
+          >
+            <img
+              alt="Набор мышечной массы"
+              src="strength.jpg"
+            />
+            <div
+              class="program-card-content"
+            >
+              <h3>
+                Набор мышечной массы
+              </h3>
+              <p>
+                Силовые тренировки для увеличения мышечной массы
+              </p>
+              <button
+                class="cta-button"
+              >
+                Подробнее
+              </button>
+            </div>
+          </div>
+          <div
+            class="program-card"
+          >
+            <img
+              alt="Йога и гибкость"
+              src="yoga.jpg"
+            />
+            <div
+              class="program-card-content"
+            >
+              <h3>
+                Йога и гибкость
+              </h3>
+              <p>
+                Гибкость и гармония тела с йогой и упражнениями на растяжку
+              </p>
+              <button
+                class="cta-button"
+              >
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="testimonials"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="section-title"
+        >
+          <h2>
+            Отзывы наших клиентов
+          </h2>
+          <p>
+            Что говорят о нас те, кто уже добился результатов
+          </p>
+        </div>
+        <div
+          class="values-grid"
+        >
+          <div
+            class="value-item"
+          >
+            <div
+              class="value-icon"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 496 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 376c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm0-128c-53.02 0-96 42.98-96 96s42.98 96 96 96c-106.04 0-192-85.96-192-192S141.96 64 248 64c53.02 0 96 42.98 96 96s-42.98 96-96 96zm0-128c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"
+                />
+              </svg>
+            </div>
+            <h3>
+              Анна, 28 лет
+            </h3>
+            <p>
+              "Лучший сервис для тренировок! За 3 месяца я достигла результатов, о которых раньше могла только мечтать. "
+            </p>
+          </div>
+          <div
+            class="value-item"
+          >
+            <div
+              class="value-icon"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 640 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M104 96H56c-13.3 0-24 10.7-24 24v104H8c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h24v104c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm528 128h-24V120c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v272c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h24c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zM456 32h-48c-13.3 0-24 10.7-24 24v168H256V56c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v400c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h128v168c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24z"
+                />
+              </svg>
+            </div>
+            <h3>
+              Дмитрий, 35 лет
+            </h3>
+            <p>
+              "Очень удобно и эффективно! Тренировки подобраны идеально под мои цели, а поддержка тренеров всегда на высоте."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="pricing"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="section-title"
+        >
+          <h2>
+            Выберите свой тариф
+          </h2>
+          <p>
+            Мы предлагаем различные варианты подписки для любых потребностей
+          </p>
+        </div>
+        <div
+          class="pricing-options"
+        >
+          <div
+            class="card pricing-card"
+          >
+            <h3>
+              Базовый
+            </h3>
+            <p>
+              Доступ к базовым тренировкам
+            </p>
+            <span
+              class="price"
+            >
+              999 руб/мес
+            </span>
+            <ul
+              class="pricing-features"
+            >
+              <li>
+                30+ базовых тренировок
+              </li>
+              <li>
+                Доступ к форуму
+              </li>
+              <li>
+                Базовые рекомендации
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+            >
+              Выбрать
+            </button>
+          </div>
+          <div
+            class="card pricing-card"
+          >
+            <h3>
+              Премиум
+            </h3>
+            <p>
+              Все тренировки + поддержка тренера
+            </p>
+            <span
+              class="price"
+            >
+              1999 руб/мес
+            </span>
+            <ul
+              class="pricing-features"
+            >
+              <li>
+                100+ тренировок
+              </li>
+              <li>
+                Поддержка тренера
+              </li>
+              <li>
+                Персональный план питания
+              </li>
+              <li>
+                Еженедельные отчеты
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+            >
+              Выбрать
+            </button>
+          </div>
+          <div
+            class="card pricing-card"
+          >
+            <h3>
+              VIP
+            </h3>
+            <p>
+              Индивидуальный подход
+            </p>
+            <span
+              class="price"
+            >
+              2999 руб/мес
+            </span>
+            <ul
+              class="pricing-features"
+            >
+              <li>
+                Все тренировки
+              </li>
+              <li>
+                Персональный тренер 24/7
+              </li>
+              <li>
+                Индивидуальный план питания
+              </li>
+              <li>
+                Ежедневная поддержка
+              </li>
+              <li>
+                Анализ прогресса
+              </li>
+            </ul>
+            <button
+              class="cta-button"
+            >
+              Выбрать
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

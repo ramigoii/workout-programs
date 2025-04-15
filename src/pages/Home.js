@@ -1,5 +1,7 @@
-import React from "react";
-import { FaCheckCircle, FaFire, FaDumbbell, FaYinYang } from "react-icons/fa";
+import React from 'react';
+import { FaCheckCircle, FaFire, FaDumbbell, FaYinYang } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import images from '../styles/assets/images.js';
 
 export const Home = ({ OnProg, OnContact }) => {
   return (
@@ -18,7 +20,10 @@ export const Home = ({ OnProg, OnContact }) => {
         <div className="container">
           <div className="section-title">
             <h2>Почему выбирают нас?</h2>
-            <p>Наши преимущества, которые помогут вам достичь желаемых результатов</p>
+            <p>
+              Наши преимущества, которые помогут вам достичь желаемых
+              результатов
+            </p>
           </div>
           <div className="benefit-items">
             <div className="benefit-item">
@@ -54,15 +59,23 @@ export const Home = ({ OnProg, OnContact }) => {
           </div>
           <div className="programs-grid">
             <div className="program-card" onClick={OnProg}>
-              <img src={require("../styles/images/weight-loss.jpg") || "/placeholder.svg"} alt="Программа для похудения" />
+              <img
+                src={images.weightloss || '/placeholder.svg'}
+                alt="Программа для похудения"
+              />
               <div className="program-card-content">
                 <h3>Программа для похудения</h3>
-                <p>Эффективные тренировки для сжигания жира и подтянутого тела</p>
+                <p>
+                  Эффективные тренировки для сжигания жира и подтянутого тела
+                </p>
                 <button className="cta-button">Подробнее</button>
               </div>
             </div>
             <div className="program-card" onClick={OnProg}>
-              <img src={require("../styles/images/strength.jpg") || "/placeholder.svg"} alt="Набор мышечной массы" />
+              <img
+                src={images.strength || '/placeholder.svg'}
+                alt="Набор мышечной массы"
+              />
               <div className="program-card-content">
                 <h3>Набор мышечной массы</h3>
                 <p>Силовые тренировки для увеличения мышечной массы</p>
@@ -70,10 +83,15 @@ export const Home = ({ OnProg, OnContact }) => {
               </div>
             </div>
             <div className="program-card" onClick={OnProg}>
-              <img src={require("../styles/images/yoga.jpg") || "/placeholder.svg"} alt="Йога и гибкость" />
+              <img
+                src={images.yoga || '/placeholder.svg'}
+                alt="Йога и гибкость"
+              />
               <div className="program-card-content">
                 <h3>Йога и гибкость</h3>
-                <p>Гибкость и гармония тела с йогой и упражнениями на растяжку</p>
+                <p>
+                  Гибкость и гармония тела с йогой и упражнениями на растяжку
+                </p>
                 <button className="cta-button">Подробнее</button>
               </div>
             </div>
@@ -93,14 +111,20 @@ export const Home = ({ OnProg, OnContact }) => {
                 <FaYinYang />
               </div>
               <h3>Анна, 28 лет</h3>
-              <p>"Лучший сервис для тренировок! За 3 месяца я достигла результатов, о которых раньше могла только мечтать."</p>
+              <p>
+                &quot;Лучший сервис для тренировок! За 3 месяца я достигла
+                результатов, о которых раньше могла только мечтать. &quot;
+              </p>
             </div>
             <div className="value-item">
               <div className="value-icon">
                 <FaDumbbell />
               </div>
               <h3>Дмитрий, 35 лет</h3>
-              <p>"Очень удобно и эффективно! Тренировки подобраны идеально под мои цели, а поддержка тренеров всегда на высоте."</p>
+              <p>
+                &quot;Очень удобно и эффективно! Тренировки подобраны идеально
+                под мои цели, а поддержка тренеров всегда на высоте.&quot;
+              </p>
             </div>
           </div>
         </div>
@@ -110,7 +134,9 @@ export const Home = ({ OnProg, OnContact }) => {
         <div className="container">
           <div className="section-title">
             <h2>Выберите свой тариф</h2>
-            <p>Мы предлагаем различные варианты подписки для любых потребностей</p>
+            <p>
+              Мы предлагаем различные варианты подписки для любых потребностей
+            </p>
           </div>
           <div className="pricing-options">
             <div className="card pricing-card">
@@ -122,7 +148,9 @@ export const Home = ({ OnProg, OnContact }) => {
                 <li>Доступ к форуму</li>
                 <li>Базовые рекомендации</li>
               </ul>
-              <button className="cta-button" onClick={OnContact}>Выбрать</button>
+              <button className="cta-button" onClick={OnContact}>
+                Выбрать
+              </button>
             </div>
             <div className="card pricing-card">
               <h3>Премиум</h3>
@@ -134,7 +162,9 @@ export const Home = ({ OnProg, OnContact }) => {
                 <li>Персональный план питания</li>
                 <li>Еженедельные отчеты</li>
               </ul>
-              <button className="cta-button" onClick={OnContact}>Выбрать</button>
+              <button className="cta-button" onClick={OnContact}>
+                Выбрать
+              </button>
             </div>
             <div className="card pricing-card">
               <h3>VIP</h3>
@@ -147,7 +177,9 @@ export const Home = ({ OnProg, OnContact }) => {
                 <li>Ежедневная поддержка</li>
                 <li>Анализ прогресса</li>
               </ul>
-              <button className="cta-button" onClick={OnContact}>Выбрать</button>
+              <button className="cta-button" onClick={OnContact}>
+                Выбрать
+              </button>
             </div>
           </div>
         </div>
@@ -155,5 +187,8 @@ export const Home = ({ OnProg, OnContact }) => {
     </div>
   );
 };
-
+Home.propTypes = {
+  OnProg: PropTypes.func.isRequired,
+  OnContact: PropTypes.func.isRequired,
+};
 export default Home;

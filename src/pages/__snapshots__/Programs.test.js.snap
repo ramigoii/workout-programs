@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Programs Component matches snapshot 1`] = `
+<div>
+  <div
+    class="programs-container"
+  >
+    <section
+      class="programs-hero"
+    >
+      <div
+        class="about-hero-content"
+      >
+        <h1>
+          Наши программы
+        </h1>
+        <p>
+          Выберите программу, которая подходит именно вам
+        </p>
+      </div>
+    </section>
+    <div
+      class="container"
+      style="padding: 2rem 1rem;"
+    >
+      <div
+        style="height: calc(100vh - 300px); min-height: 600px; width: 100%;"
+      >
+        <div
+          style="padding: 15px; box-sizing: border-box;"
+        >
+          <div
+            class="program-card"
+            style="height: 100%; display: flex; flex-direction: column;"
+          >
+            <img
+              alt="Сила и выносливость"
+              src="strength.jpg"
+              style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-lg) var(--radius-lg) 0 0;"
+            />
+            <div
+              class="program-card-content"
+              style="flex: 1; display: flex; flex-direction: column;"
+            >
+              <h3>
+                Сила и выносливость
+              </h3>
+              <p
+                style="flex: 1;"
+              >
+                Развивайте силу и выносливость с профессиональными тренировками.
+              </p>
+              <button
+                class="cta-button"
+              >
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

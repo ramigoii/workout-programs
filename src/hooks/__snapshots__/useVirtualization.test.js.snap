@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useVirtualization snapshot of hook result 1`] = `
+Object {
+  "columnCount": 3,
+  "dimensions": Object {
+    "height": 768,
+    "width": 1200,
+  },
+}
+`;
