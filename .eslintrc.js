@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'react/prop-types': 'off'
     // свои кастомные правила, если нужно
   },
   settings: {

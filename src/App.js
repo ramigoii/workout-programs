@@ -8,6 +8,9 @@ import Programs from './pages/Programs.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 import ProgramDetails from './Components/ProgramDetails.js'; // ← Add this if you have it
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
 
 // Контекст темы
 const ThemeContext = createContext();
@@ -38,6 +41,7 @@ const App = () => {
   };
 
   return (
+    
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <Navbar />
       <div className="content">
@@ -66,12 +70,17 @@ const App = () => {
               />
             }
           />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+
         </Routes>
       </div>
       <Footer />
     </ThemeContext.Provider>
+    
   );
 };
 
-export { ThemeProvider, useTheme };
+export { useTheme };
 export default App;

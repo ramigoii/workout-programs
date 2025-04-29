@@ -314,6 +314,7 @@ img {
   transition:
     transform var(--transition-normal),
     box-shadow var(--transition-normal);
+  
 }
 
 .card:hover {
@@ -1006,6 +1007,16 @@ img {
 
 .footer-bottom a {
   color: var(--primary);
+}
+.pricing-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Отступ между карточками */
+  flex-wrap: wrap; /* Убирай или оставляй в зависимости от поведения на маленьких экранах */
+}
+.pricing-card {
+  flex: 1;
+  min-width: 250px;
 }
 
 /* Theme Toggle Animation */

@@ -18,36 +18,29 @@ export const Navbar = () => {
         </Link>
       </div>
       <ul className="nav-links">
-        <li>
-          <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
-            Главная
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/programs"
-            className={`nav-link ${isActive('/programs') ? 'active' : ''}`}
-          >
-            Программы
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className={`nav-link ${isActive('/about') ? 'active' : ''}`}
-          >
-            О нас
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/contact"
-            className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
-          >
-            Контакты
-          </Link>
-        </li>
-      </ul>
+      <li>
+        <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Главная</Link>
+      </li>
+      <li>
+        <Link to="/programs" className={`nav-link ${isActive('/programs') ? 'active' : ''}`}>Программы</Link>
+      </li>
+      <li>
+        <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`}>О нас</Link>
+      </li>
+      <li>
+        <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>Контакты</Link>
+      </li>
+      <li>
+        <Link to="/login" className={`nav-link ${isActive('/login') ? 'active' : ''}`}>Вход</Link>
+      </li>
+      <li>
+        <Link to="/register" className={`nav-link ${isActive('/register') ? 'active' : ''}`}>Регистрация</Link>
+      </li>
+      <li>
+        <Link to="/profile" className={`nav-link ${isActive('/profile') ? 'active' : ''}`}>profile</Link>
+      </li>
+    </ul>
+
       <button
         className="theme-toggle"
         onClick={toggleTheme}

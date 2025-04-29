@@ -191,6 +191,7 @@ export const programs = [
 ];
 
 // Program Card Cell Component for the virtualized grid
+/* eslint-disable react/prop-types */
 const ProgramCell = ({ columnIndex, rowIndex, style, data }) => {
   const { items, columnCount } = data;
   const index = rowIndex * columnCount + columnIndex;
@@ -286,4 +287,5 @@ ProgramCell.propTypes = {
     onProgramClick: PropTypes.func.isRequired,
   }).isRequired,
 };
+
 export default Programs;
